@@ -1,7 +1,7 @@
 from odoo import  fields, models
 
 
-class hotelEvaluate(models.Model):
+class HotelEvaluate(models.Model):
     _name = 'hotel.onl.payment'
     _description = "Hotel onl payment"
 

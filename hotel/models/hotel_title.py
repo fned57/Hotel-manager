@@ -1,9 +1,9 @@
 from odoo import  fields, models
 
 
-class hotelTitle(models.Model):
-    _name = 'hotel.title'
-    _description = "Hotel title"
+class HotelPosition(models.Model):
+    _name = 'hotel.position'
+    _description = "Hotel position"
 
     name = fields.Char(string="Name")
     description = fields.Text(string="Description title")

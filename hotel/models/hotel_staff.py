@@ -1,7 +1,7 @@
 from odoo import  fields, models
 
 
-class hotelStaff(models.Model):
+class HotelStaff(models.Model):
     _name = 'hotel.staff'
     _description = "Hotel staff"
 

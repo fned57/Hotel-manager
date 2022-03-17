@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+
+<odoo>
+
+    <data>
+
+
+        <record id="hotel_bill_detail_act" model="ir.actions.act_window">
+            <field name="name">Bill detail</field>
+            <field name="res_model">hotel.bill.detail</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_mode">kanban,form,tree</field>
+        </record>
+
+        <menuitem id="hotel_bill_detail_menu"
+                  name="Bill detail"
+                  parent="hotel_bill_menu_root"
+                  action="hotel_bill_detail_act"
+        />
+
+    </data>
+</odoo>

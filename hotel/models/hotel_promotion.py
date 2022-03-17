@@ -1,7 +1,7 @@
 from odoo import  fields, models
 
 
-class hotelPromotion(models.Model):
+class HotelPromotion(models.Model):
     _name = 'hotel.promotion'
     _description = "Hotel promotion"
 
@@ -12,5 +12,5 @@ class hotelPromotion(models.Model):
     starting_date = fields.Date(string="start date")
     ending_date = fields.Date(string="End Date")
     status = fields.Char(string="Status")
-    id_type_room = fields.Many2one('hotel.type.room', string="Type room")
+    room_type_id = fields.Many2one('hotel.room.type', string="Room type")
     
