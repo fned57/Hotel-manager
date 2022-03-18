@@ -13,4 +13,5 @@ class HotelReservationForm(models.Model):
     total_mature = fields.Integer(string="Total mature")
     total_chidren = fields.Integer(string="Total chidren")
     id_type_room = fields.Many2one('hotel.room.type', string="Room Type")
-    room_ids = fields.Many2many('hotel.room', string="List rooms")
+    # room_ids = fields.Many2many('hotel.room', string="List rooms")
+    service_detail_id = fields.Many2many('hotel.service.detail', string="Service")

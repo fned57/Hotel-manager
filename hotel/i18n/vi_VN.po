@@ -1,0 +1,575 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hotel
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-03-18 08:37+0000\n"
+"PO-Revision-Date: 2022-03-18 08:37+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_detail__number_of_uses
+msgid " Number of Uses"
+msgstr "Số lần sử dụng"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_staff__address
+msgid "Address"
+msgstr "Địa chỉ"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_bill_detail__amount
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_detail__amount
+msgid "Amount"
+msgstr "Số lượn"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_reservation_form__arrival_date
+msgid "Arrival Date"
+msgstr "Ngày tới"
+
+#. module: hotel
+#: model:ir.actions.act_window,name:hotel.hotel_bill_act
+#: model:ir.model.fields,field_description:hotel.field_hotel_bill_detail__id_bill
+#: model:ir.ui.menu,name:hotel.hotel_bill_menu
+#: model:ir.ui.menu,name:hotel.hotel_bill_menu_root
+msgid "Bill"
+msgstr "Hóa đơn"
+
+#. module: hotel
+#: model:ir.actions.act_window,name:hotel.hotel_bill_detail_act
+#: model:ir.ui.menu,name:hotel.hotel_bill_detail_menu
+msgid "Bill detail"
+msgstr "Chi tiết hóa đơn"
+
+#. module: hotel
+#: model:ir.model.fields.selection,name:hotel.selection__hotel_room__status__2
+msgid "Busy"
+msgstr "Bận"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_bill__cost
+msgid "Cost"
+msgstr "Tổng tiền"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_bill__create_uid
+#: model:ir.model.fields,field_description:hotel.field_hotel_bill_detail__create_uid
+#: model:ir.model.fields,field_description:hotel.field_hotel_contact__create_uid
+#: model:ir.model.fields,field_description:hotel.field_hotel_evaluate__create_uid
+#: model:ir.model.fields,field_description:hotel.field_hotel_guest__create_uid
+#: model:ir.model.fields,field_description:hotel.field_hotel_onl_payment__create_uid
+#: model:ir.model.fields,field_description:hotel.field_hotel_position__create_uid
+#: model:ir.model.fields,field_description:hotel.field_hotel_promotion__create_uid
+#: model:ir.model.fields,field_description:hotel.field_hotel_reservation_form__create_uid
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__create_uid
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_type__create_uid
+#: model:ir.model.fields,field_description:hotel.field_hotel_service__create_uid
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_detail__create_uid
+#: model:ir.model.fields,field_description:hotel.field_hotel_staff__create_uid
+msgid "Created by"
+msgstr "Người tạo"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_bill__create_date
+#: model:ir.model.fields,field_description:hotel.field_hotel_bill_detail__create_date
+#: model:ir.model.fields,field_description:hotel.field_hotel_contact__create_date
+#: model:ir.model.fields,field_description:hotel.field_hotel_evaluate__create_date
+#: model:ir.model.fields,field_description:hotel.field_hotel_guest__create_date
+#: model:ir.model.fields,field_description:hotel.field_hotel_onl_payment__create_date
+#: model:ir.model.fields,field_description:hotel.field_hotel_position__create_date
+#: model:ir.model.fields,field_description:hotel.field_hotel_promotion__create_date
+#: model:ir.model.fields,field_description:hotel.field_hotel_reservation_form__create_date
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__create_date
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_type__create_date
+#: model:ir.model.fields,field_description:hotel.field_hotel_service__create_date
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_detail__create_date
+#: model:ir.model.fields,field_description:hotel.field_hotel_staff__create_date
+msgid "Created on"
+msgstr "Ngày tạo"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_evaluate__date_sent
+msgid "Data sent"
+msgstr "Ngày gửi"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_bill__date
+msgid "Date"
+msgstr "Ngày"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_contact__date_sent
+msgid "Date Sent"
+msgstr "Ngày gửi"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_staff__birthday
+msgid "Date of birth"
+msgstr "Ngày sinh"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_reservation_form__date_of_issue
+msgid "Date of issue"
+msgstr "ngày cấp"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_onl_payment__data_of_payment
+#: model:ir.model.fields,field_description:hotel.field_hotel_service__date_of_payment
+msgid "Date of payment"
+msgstr "Ngày thanh toán"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_reservation_form__departure_date
+msgid "Departure Date"
+msgstr "Ngày kết thúc"
+
+#. module: hotel
+#: model_terms:ir.ui.view,arch_db:hotel.hotel_room_view_kanban
+msgid "Description :"
+msgstr "Mô tả"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__description
+#: model:ir.model.fields,field_description:hotel.field_hotel_service__description
+msgid "Description Room"
+msgstr "Mô tả phòng"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_type__description
+msgid "Description room type"
+msgstr "Mô tả kiểu phòng"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_position__description
+msgid "Description title"
+msgstr "Mô tả chức vụ"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_bill__display_name
+#: model:ir.model.fields,field_description:hotel.field_hotel_bill_detail__display_name
+#: model:ir.model.fields,field_description:hotel.field_hotel_contact__display_name
+#: model:ir.model.fields,field_description:hotel.field_hotel_evaluate__display_name
+#: model:ir.model.fields,field_description:hotel.field_hotel_guest__display_name
+#: model:ir.model.fields,field_description:hotel.field_hotel_onl_payment__display_name
+#: model:ir.model.fields,field_description:hotel.field_hotel_position__display_name
+#: model:ir.model.fields,field_description:hotel.field_hotel_promotion__display_name
+#: model:ir.model.fields,field_description:hotel.field_hotel_reservation_form__display_name
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__display_name
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_type__display_name
+#: model:ir.model.fields,field_description:hotel.field_hotel_service__display_name
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_detail__display_name
+#: model:ir.model.fields,field_description:hotel.field_hotel_staff__display_name
+msgid "Display Name"
+msgstr "Tên hiện  thị"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_contact__email
+#: model:ir.model.fields,field_description:hotel.field_hotel_evaluate__email
+#: model:ir.model.fields,field_description:hotel.field_hotel_guest__email
+msgid "Email"
+msgstr ""
+
+#. module: hotel
+#: model:ir.model.fields.selection,name:hotel.selection__hotel_room__status__1
+msgid "Empty"
+msgstr ""
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_promotion__ending_date
+msgid "End Date"
+msgstr "Ngày hết hạn"
+
+#. module: hotel
+#: model:ir.actions.act_window,name:hotel.hotel_evaluate_act
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__evaluate_ids
+#: model:ir.ui.menu,name:hotel.hotel_Evaluate_menu
+msgid "Evaluate"
+msgstr "Đánh giá"
+
+#. module: hotel
+#: model:ir.actions.act_window,name:hotel.hotel_guest_act
+#: model:ir.model.fields,field_description:hotel.field_hotel_evaluate__guest
+#: model:ir.model.fields,field_description:hotel.field_hotel_onl_payment__id_guest
+#: model:ir.model.fields,field_description:hotel.field_hotel_reservation_form__id_guest
+#: model:ir.ui.menu,name:hotel.hotel_guest_menu
+#: model:ir.ui.menu,name:hotel.hotel_guest_menu_root
+msgid "Guest"
+msgstr "Khác hàng"
+
+#. module: hotel
+#: model:ir.ui.menu,name:hotel.hotel_menu_root
+#: model:ir.ui.menu,name:hotel.hotel_menu_roots
+msgid "Hotel"
+msgstr "Khác sạn"
+
+#. module: hotel
+#: model:ir.model,name:hotel.model_hotel_reservation_form
+msgid "Hotel Reservation form"
+msgstr "Đơn đặt phòng"
+
+#. module: hotel
+#: model:ir.model,name:hotel.model_hotel_room
+msgid "Hotel Rooms"
+msgstr "Phòng"
+
+#. module: hotel
+#: model:ir.model,name:hotel.model_hotel_room_type
+msgid "Hotel Rooms Type"
+msgstr "Kiểu phòng"
+
+#. module: hotel
+#: model:ir.model,name:hotel.model_hotel_service
+msgid "Hotel Service"
+msgstr "Dịch vụ"
+
+#. module: hotel
+#: model:ir.model,name:hotel.model_hotel_service_detail
+msgid "Hotel Service detail"
+msgstr "Chi tiết dịch vụ"
+
+#. module: hotel
+#: model:ir.model,name:hotel.model_hotel_bill
+msgid "Hotel bill"
+msgstr "Hóa đơn"
+
+#. module: hotel
+#: model:ir.model,name:hotel.model_hotel_bill_detail
+msgid "Hotel bill detail"
+msgstr "Chi tiết hóa đơn"
+
+#. module: hotel
+#: model:ir.model,name:hotel.model_hotel_contact
+msgid "Hotel cantact"
+msgstr "Danh bạn"
+
+#. module: hotel
+#: model:ir.model,name:hotel.model_hotel_evaluate
+msgid "Hotel evaluate"
+msgstr "Đánh giá"
+
+#. module: hotel
+#: model:ir.model,name:hotel.model_hotel_guest
+msgid "Hotel guest"
+msgstr "Khác hàng"
+
+#. module: hotel
+#: model:ir.model,name:hotel.model_hotel_onl_payment
+msgid "Hotel onl payment"
+msgstr "Thanh toán online"
+
+#. module: hotel
+#: model:ir.model,name:hotel.model_hotel_position
+msgid "Hotel position"
+msgstr "chức vụ"
+
+#. module: hotel
+#: model:ir.model,name:hotel.model_hotel_promotion
+msgid "Hotel promotion"
+msgstr "Khuyến mãi"
+
+#. module: hotel
+#: model:ir.model,name:hotel.model_hotel_staff
+msgid "Hotel staff"
+msgstr "Nhân viên"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_bill__id
+#: model:ir.model.fields,field_description:hotel.field_hotel_bill_detail__id
+#: model:ir.model.fields,field_description:hotel.field_hotel_contact__id
+#: model:ir.model.fields,field_description:hotel.field_hotel_evaluate__id
+#: model:ir.model.fields,field_description:hotel.field_hotel_guest__id
+#: model:ir.model.fields,field_description:hotel.field_hotel_onl_payment__id
+#: model:ir.model.fields,field_description:hotel.field_hotel_position__id
+#: model:ir.model.fields,field_description:hotel.field_hotel_promotion__id
+#: model:ir.model.fields,field_description:hotel.field_hotel_reservation_form__id
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__id
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_type__id
+#: model:ir.model.fields,field_description:hotel.field_hotel_service__id
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_detail__id
+#: model:ir.model.fields,field_description:hotel.field_hotel_staff__id
+msgid "ID"
+msgstr ""
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__avatar
+msgid "Image Avatar"
+msgstr "Ảnh phòng"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_promotion__image
+msgid "Image promotion"
+msgstr "hình ảnh giảm giá"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_guest__idenitily
+msgid "Indenitily"
+msgstr ""
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_bill____last_update
+#: model:ir.model.fields,field_description:hotel.field_hotel_bill_detail____last_update
+#: model:ir.model.fields,field_description:hotel.field_hotel_contact____last_update
+#: model:ir.model.fields,field_description:hotel.field_hotel_evaluate____last_update
+#: model:ir.model.fields,field_description:hotel.field_hotel_guest____last_update
+#: model:ir.model.fields,field_description:hotel.field_hotel_onl_payment____last_update
+#: model:ir.model.fields,field_description:hotel.field_hotel_position____last_update
+#: model:ir.model.fields,field_description:hotel.field_hotel_promotion____last_update
+#: model:ir.model.fields,field_description:hotel.field_hotel_reservation_form____last_update
+#: model:ir.model.fields,field_description:hotel.field_hotel_room____last_update
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_type____last_update
+#: model:ir.model.fields,field_description:hotel.field_hotel_service____last_update
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_detail____last_update
+#: model:ir.model.fields,field_description:hotel.field_hotel_staff____last_update
+msgid "Last Modified on"
+msgstr "Sửa đổi lần cuối"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_bill__write_uid
+#: model:ir.model.fields,field_description:hotel.field_hotel_bill_detail__write_uid
+#: model:ir.model.fields,field_description:hotel.field_hotel_contact__write_uid
+#: model:ir.model.fields,field_description:hotel.field_hotel_evaluate__write_uid
+#: model:ir.model.fields,field_description:hotel.field_hotel_guest__write_uid
+#: model:ir.model.fields,field_description:hotel.field_hotel_onl_payment__write_uid
+#: model:ir.model.fields,field_description:hotel.field_hotel_position__write_uid
+#: model:ir.model.fields,field_description:hotel.field_hotel_promotion__write_uid
+#: model:ir.model.fields,field_description:hotel.field_hotel_reservation_form__write_uid
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__write_uid
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_type__write_uid
+#: model:ir.model.fields,field_description:hotel.field_hotel_service__write_uid
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_detail__write_uid
+#: model:ir.model.fields,field_description:hotel.field_hotel_staff__write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_bill__write_date
+#: model:ir.model.fields,field_description:hotel.field_hotel_bill_detail__write_date
+#: model:ir.model.fields,field_description:hotel.field_hotel_contact__write_date
+#: model:ir.model.fields,field_description:hotel.field_hotel_evaluate__write_date
+#: model:ir.model.fields,field_description:hotel.field_hotel_guest__write_date
+#: model:ir.model.fields,field_description:hotel.field_hotel_onl_payment__write_date
+#: model:ir.model.fields,field_description:hotel.field_hotel_position__write_date
+#: model:ir.model.fields,field_description:hotel.field_hotel_promotion__write_date
+#: model:ir.model.fields,field_description:hotel.field_hotel_reservation_form__write_date
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__write_date
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_type__write_date
+#: model:ir.model.fields,field_description:hotel.field_hotel_service__write_date
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_detail__write_date
+#: model:ir.model.fields,field_description:hotel.field_hotel_staff__write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối vào"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_bill_detail__mode_of_payment
+msgid "Mode id payment"
+msgstr "Phương thức thanh toán"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_contact__name
+#: model:ir.model.fields,field_description:hotel.field_hotel_evaluate__name
+#: model:ir.model.fields,field_description:hotel.field_hotel_guest__name
+#: model:ir.model.fields,field_description:hotel.field_hotel_position__name
+#: model:ir.model.fields,field_description:hotel.field_hotel_promotion__name
+#: model:ir.model.fields,field_description:hotel.field_hotel_staff__name
+msgid "Name"
+msgstr "Tên"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__name
+msgid "Name room"
+msgstr "Tên phòng"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_service__name
+msgid "Name service"
+msgstr "Tên dịch vụ"
+
+#. module: hotel
+#: model_terms:ir.ui.view,arch_db:hotel.hotel_room_view_kanban
+msgid "Name:"
+msgstr "Tên phòng"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_detail__note
+msgid "Node"
+msgstr "Ghi chú"
+
+#. module: hotel
+#: model:ir.actions.act_window,name:hotel.hotel_onl_payment_act
+msgid "Onl Payment"
+msgstr "Thanh toán onl"
+
+#. module: hotel
+#: model:ir.ui.menu,name:hotel.hotel_position_menu
+msgid "Onl payment"
+msgstr "Thanh toán onl"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_guest__password
+#: model:ir.model.fields,field_description:hotel.field_hotel_staff__password
+msgid "Password"
+msgstr "Mật khẩu"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_guest__phone
+msgid "Phone"
+msgstr "Số điện thoại"
+
+#. module: hotel
+#: model:ir.actions.act_window,name:hotel.hotel_position_act
+#: model:ir.model.fields,field_description:hotel.field_hotel_staff__position
+#: model:ir.ui.menu,name:hotel.hotel_position_menu_root
+#: model:ir.ui.menu,name:hotel.hotel_positions_menu
+msgid "Position"
+msgstr "Chức vụ"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_service__price
+msgid "Price"
+msgstr "Giá"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_type__price
+msgid "Price Room"
+msgstr "Giá phòng"
+
+#. module: hotel
+#: model:ir.actions.act_window,name:hotel.hotel_promotion_act
+#: model:ir.ui.menu,name:hotel.hotel_promotion_menu
+msgid "Promotion"
+msgstr "Khuyến mãi"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_bill_detail__promotion_discount
+msgid "Promotion discount"
+msgstr "Giảm giá"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__reservation_form_ids
+msgid "Reservation Form"
+msgstr "Đặt phòng"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_onl_payment__id_reservation_form
+msgid "Reservation from"
+msgstr "Đặt phòng"
+
+#. module: hotel
+#: model:ir.actions.act_window,name:hotel.hotel_room_act
+#: model:ir.actions.act_window,name:hotel.hotel_rooms_act_in_active_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_bill_detail__room_cost
+#: model:ir.model.fields,field_description:hotel.field_hotel_evaluate__room_id
+#: model:ir.ui.menu,name:hotel.hotel_room_menu
+msgid "Room"
+msgstr "phòng"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_reservation_form__id_type_room
+#: model:ir.ui.menu,name:hotel.hotel_room_type_menu
+msgid "Room Type"
+msgstr "Kiểu phòng"
+
+#. module: hotel
+#: model:ir.actions.act_window,name:hotel.hotel_room_type_act
+#: model:ir.model.fields,field_description:hotel.field_hotel_promotion__room_type_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__room_type_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_type__name
+msgid "Room type"
+msgstr "Kiểu phòng"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room_type__room_ids
+#: model_terms:ir.ui.view,arch_db:hotel.view_hotel_room_type_kanban
+msgid "Rooms"
+msgstr "Danh sách phòng"
+
+#. module: hotel
+#: model:ir.actions.act_window,name:hotel.hotel_service_act
+#: model:ir.actions.act_window,name:hotel.hotel_service_detail_act
+#: model:ir.model.fields,field_description:hotel.field_hotel_bill_detail__service_cost
+#: model:ir.model.fields,field_description:hotel.field_hotel_reservation_form__service_detail_id
+#: model:ir.model.fields,field_description:hotel.field_hotel_service_detail__id_service
+#: model:ir.ui.menu,name:hotel.hotel_service_menu
+#: model:ir.ui.menu,name:hotel.hotel_service_menu_root
+msgid "Service"
+msgstr "Dịch vụ"
+
+#. module: hotel
+#: model:ir.ui.menu,name:hotel.hotel_service_detail_menu
+msgid "Service detail"
+msgstr "Chi tiết dịch vụ"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_promotion__short_description
+msgid "Short description"
+msgstr "Mô tả ngắn"
+
+#. module: hotel
+#: model:ir.actions.act_window,name:hotel.hotel_staff_act
+#: model:ir.model.fields,field_description:hotel.field_hotel_bill__id_staff
+#: model:ir.ui.menu,name:hotel.hotel_staff_menu
+msgid "Staff"
+msgstr "Nhân viên"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_contact__status
+#: model:ir.model.fields,field_description:hotel.field_hotel_promotion__status
+#: model:ir.model.fields,field_description:hotel.field_hotel_reservation_form__status
+msgid "Status"
+msgstr "Trạng thái"
+
+#. module: hotel
+#: model_terms:ir.ui.view,arch_db:hotel.hotel_room_view_kanban
+msgid "Status:"
+msgstr "Trạng thái"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_contact__subject
+#: model:ir.model.fields,field_description:hotel.field_hotel_evaluate__subject
+#: model:ir.model.fields,field_description:hotel.field_hotel_promotion__subject
+msgid "Subject"
+msgstr "Tiêu đề"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_onl_payment__total_amount
+msgid "Total Amount"
+msgstr "Tổng tiền"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_reservation_form__total_chidren
+msgid "Total chidren"
+msgstr "số trẻ em"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_reservation_form__total_mature
+msgid "Total mature"
+msgstr "Số người lớn"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_room__status
+msgid "Type"
+msgstr "Kiểu"
+
+#. module: hotel
+#: model:ir.ui.menu,name:hotel.hotel_reservation_form_menu
+msgid "reservation"
+msgstr "Phiếu đặt"
+
+#. module: hotel
+#: model:ir.actions.act_window,name:hotel.hotel_reservation_form_act
+msgid "reservation form"
+msgstr "Phiếu đặt"
+
+#. module: hotel
+#: model:ir.model.fields,field_description:hotel.field_hotel_promotion__starting_date
+msgid "start date"
+msgstr "Ngày bắt đầu"

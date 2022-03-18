@@ -11,4 +11,4 @@ from . import hotel_bill
 from . import hotel_bill_detail
 from . import hotel_contact
 from . import hotel_staff
-from . import hotel_title
+from . import hotel_position

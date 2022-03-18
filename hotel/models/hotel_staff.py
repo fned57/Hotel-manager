@@ -8,5 +8,6 @@ class HotelStaff(models.Model):
     name = fields.Char(string="Name")
     birthday = fields.Date(string="Date of birth")
     address = fields.Char(string="Address")
-    id_title = fields.Many2one('hotel.staff', string="Title")
+    position= fields.Many2one('hotel.position', string="Position")
     password = fields.Char(string="Password")
+

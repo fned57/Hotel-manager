@@ -13,7 +13,7 @@
             <field name="view_mode">kanban,form,tree</field>
         </record>
 
-        <menuitem id="hotel_position_menu"
+        <menuitem id="hotel_positions_menu"
                   name="Position"
                   parent="hotel_position_menu_root"
                   action="hotel_position_act"

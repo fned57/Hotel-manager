@@ -10,4 +10,4 @@ class HotelEvaluate(models.Model):
     subject = fields.Char(string="Subject")
     guest = fields.Char(string="Guest")
     date_sent = fields.Date(string="Data sent")
-    room_type_id = fields.Many2one('hotel.room.type', string="Room type")
+    room_id = fields.Many2one('hotel.room', string="Room")

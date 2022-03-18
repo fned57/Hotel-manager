@@ -10,7 +10,7 @@
             <field name="name">reservation form</field>
             <field name="res_model">hotel.reservation.form</field>
             <field name="type">ir.actions.act_window</field>
-            <field name="view_mode">kanban,form,tree</field>
+            <field name="view_mode">form,tree</field>
         </record>
 
         <menuitem id="hotel_reservation_form_menu"

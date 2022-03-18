@@ -12,7 +12,7 @@
     </record>
   <menuitem id="hotel_promotion_menu"
                   name="Promotion"
-                  parent="hotel_position_menu_root"
+                  parent="hotel_menu_root"
                   action="hotel_promotion_act"
         />
     </data>
