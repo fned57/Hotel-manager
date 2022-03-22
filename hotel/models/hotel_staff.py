@@ -4,10 +4,8 @@ from odoo import  fields, models
 class HotelStaff(models.Model):
     _name = 'hotel.staff'
     _description = "Hotel staff"
-
-    name = fields.Char(string="Name")
-    birthday = fields.Date(string="Date of birth")
-    address = fields.Char(string="Address")
-    position= fields.Many2one('hotel.position', string="Position")
-    password = fields.Char(string="Password")
-
+    _rec_name = 'user_id'
+    #
+    position_id = fields.Many2one('hotel.position',string='Position')
+    user_id = fields.Many2one('res.users', 'User', default=lambda self: self.env.user.id)
+    # name = fields.Char(related='user_id.name')

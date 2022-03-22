@@ -6,9 +6,6 @@ from . import holel_room_type
 from . import hotel_onl_payment
 from . import hotel_reservation_form
 from . import hotel_service_detail
-from . import hotle_guest
-from . import hotel_bill
 from . import hotel_bill_detail
-from . import hotel_contact
 from . import hotel_staff
 from . import hotel_position

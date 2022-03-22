@@ -4,13 +4,53 @@
 <odoo>
 
     <data>
+        <record id="hotel_bill_detail_view_form" model="ir.ui.view">
+            <field name="name">hotel.bill.detail.form</field>
+            <field name="model">hotel.bill.detail</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="data_of_issue"/>
+                                <field name="mode_of_payment"/>
+                                <field name="user_time"/>
+                                <field name="staff_id"/>
+                            </group>
+                        </group>
+                        <group>
+                            <field name="reservation_form_id"/>
+
+                        </group>
+                        <group>
+                            <field name="total_many"/>
+                            <field name="many"/>
 
 
+                        </group>
+
+                    </sheet>
+                </form>
+            </field>
+        </record>
         <record id="hotel_bill_detail_act" model="ir.actions.act_window">
             <field name="name">Bill detail</field>
             <field name="res_model">hotel.bill.detail</field>
             <field name="type">ir.actions.act_window</field>
-            <field name="view_mode">kanban,form,tree</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <record id="hotel_bill_details_act" model="ir.actions.act_window">
+            <field name="name">Bills detail</field>
+            <field name="res_model">hotel.bill.detail</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_mode">form</field>
+             <field name="domain">
+                [("reservation_form_id.id", "=", active_id)]
+            </field>
+             <field name="context">{
+                "searchpanel_default_reservation_form_id": active_id,
+                "default_reservation_form_id": active_id}
+            </field>
         </record>
 
         <menuitem id="hotel_bill_detail_menu"

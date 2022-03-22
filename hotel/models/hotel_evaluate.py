@@ -1,13 +1,11 @@
 from odoo import  fields, models
-
+from datetime import datetime
 
 class HotelEvaluate(models.Model):
     _name = 'hotel.evaluate'
     _description = "Hotel evaluate"
 
-    name = fields.Char(string="Name")
-    email = fields.Char(string="Email")
+    user_id = fields.Many2one('res.users', 'User', default=lambda self: self.env.user.id,readonly=True)
     subject = fields.Char(string="Subject")
-    guest = fields.Char(string="Guest")
-    date_sent = fields.Date(string="Data sent")
+    date_sent = fields.Date(string="Data sent",default=datetime.today(), readonly=True)
     room_id = fields.Many2one('hotel.room', string="Room")

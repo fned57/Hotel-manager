@@ -10,7 +10,7 @@
             <field name="name">Service</field>
             <field name="res_model">hotel.service.detail</field>
             <field name="type">ir.actions.act_window</field>
-            <field name="view_mode">kanban,form,tree</field>
+            <field name="view_mode">form</field>
         </record>
         <menuitem id="hotel_service_detail_menu"
                   name="Service detail"

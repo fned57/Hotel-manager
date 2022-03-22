@@ -2,41 +2,51 @@
 
 
 <odoo>
-
     <data>
-
         <record id="hotel_room_view_form" model="ir.ui.view">
             <field name="name">hotel.room.form</field>
             <field name="model">hotel.room</field>
             <field name="arch" type="xml">
                 <form>
                     <scheet>
-                        <div class="row align-items-center">
-                            <div class="col">
+                        <div class="row align-items-start">
+                            <div class="col" >
                                 <field name="avatar" widget="image"/>
                                 <field name="description"/>
                             </div>
                             <div class="col">
                                 <h1>
+                                    <spam>Room type:</spam>
+                                    <spam>
+                                        <field name="room_type_id"/>
+                                    </spam>
+                                </h1>
+                                <h2>
                                     <spam>Name:</spam>
                                     <spam>
                                         <field name="name"/>
                                     </spam>
-                                </h1>
+                                </h2>
                                 <p>
                                     <spam>Status:</spam>
                                     <spam>
                                         <field name="status"/>
                                     </spam>
                                 </p>
-                               <button class="btn btn-primary" name="%(hotel_reservation_form_act)d" type="action">
+                                <button class="btn btn-primary" name="%(hotel_reservation_form1_act)d" type="action">
                                     Reservation
                                 </button>
                                 <field name="evaluate_ids">
-                                    <tree>
-                                        <field name="name"/>
+                                    <tree editable="bottom">
+                                        <field name="user_id"/>
                                         <field name="subject"/>
+                                        <field name="date_sent"/>
                                     </tree>
+                                    <form>
+                                        <group>
+                                            <field name="subject"/>
+                                        </group>
+                                    </form>
                                 </field>
                             </div>
                         </div>
