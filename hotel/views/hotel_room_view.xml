@@ -33,9 +33,6 @@
                                         <field name="status"/>
                                     </spam>
                                 </p>
-                                <button class="btn btn-primary" name="%(hotel_reservation_form1_act)d" type="action">
-                                    Reservation
-                                </button>
                                 <field name="evaluate_ids">
                                     <tree editable="bottom">
                                         <field name="user_id"/>

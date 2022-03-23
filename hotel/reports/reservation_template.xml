@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+
+    <template id="reservation">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <h1>INVOICE</h1>
+                            <h2>
+                                User name:
+                                <t t-esc="doc.guest_id.name"/>
+                            </h2>
+                            Date of issue :
+                            <t t-esc="doc.date_of_issue"/>
+                            <br/>
+                            Arrival date :
+                            <t t-esc="doc.arrival_date"/>
+                            <br/>
+                            Departure date :
+                            <t t-esc="doc.departure_date"/>
+                        </div>
+                        <div class="col">
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <hr/>
+
+                <div class="container">
+                    <h3>Rooms</h3>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Room type</th>
+                                <th scope="col">Price</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <t t-foreach="doc.room_ids" t-as="line">
+                                <tr>
+                                    <th scope="row">
+                                        <span t-field="line.id"/>
+                                    </th>
+                                    <td>
+                                        <span t-field="line.name"/>
+                                    </td>
+                                    <td>
+                                        <span t-field="line.room_type_id.name"/>
+                                    </td>
+                                    <td>
+                                        <span t-field="line.price"/>
+                                    </td>
+                                </tr>
+
+                            </t>
+
+
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="container">
+                    <h3>Service</h3>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Name</th>
+                                <th scope="col">Quantity</th>
+                                <th scope="col">Unit Price</th>
+                                <th scope="col">Amount</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <t t-foreach="doc.service_detail_ids" t-as="line">
+                                <tr>
+                                    <th scope="row">
+                                        <span t-field="line.service_id"/>
+                                    </th>
+                                    <td>
+                                        <span t-field="line.number_of_uses"/>
+                                    </td>
+                                    <td>
+                                        <span t-field="line.service_id.price"/>
+                                    </td>
+                                    <td>
+                                        <span t-field="line.amount"/>
+                                    </td>
+                                </tr>
+
+                            </t>
+
+
+                        </tbody>
+                    </table>
+                </div>
+                <hr/>
+                Total : <br/>
+                Room:
+                <br/>
+
+                Service :
+
+
+            </t>
+        </t>
+    </template>
+
+</odoo>

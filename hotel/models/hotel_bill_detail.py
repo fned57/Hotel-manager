@@ -14,6 +14,7 @@ class HotelBill(models.Model):
     promotion_ids = fields.Many2many('hotel.promotion', string="Promotions")
     many = fields.Float(string="Many",compute='_compute_many')
 
+
     @api.depends('reservation_form_id', 'promotion_ids','user_time')
     def _compute_many(self):
         self.many = self.total_many

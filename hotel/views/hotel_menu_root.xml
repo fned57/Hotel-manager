@@ -23,8 +23,5 @@
         <menuitem id="hotel_guest_menu_root"
                    parent="hotel_menu_roots"
                   name="Guest"/>
-        <menuitem id="hotel_bill_menu_root"
-                   parent="hotel_menu_roots"
-                  name="Bill"/>
     </data>
 </odoo>

@@ -21,11 +21,10 @@
         'views/hotel_service_detail_view.xml',
         'views/hotel_position_view.xml',
         'views/hotel_staff_view.xml',
-        'views/hotel_bill_detail_view.xml',
         'views/hotel_reservation_form_view.xml',
-
-        'views/hotel_users_view.xml',
         'views/hotel_room_view.xml',
+        'reports/reports.xml',
+        'reports/reservation_template.xml',
 
     ],
     # 'qweb': ['static/src/xml/*.xml'],
