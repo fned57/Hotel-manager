@@ -8,4 +8,4 @@ access_hotel_service_detail_manager,hotel.service.detail.manager,model_hotel_ser
 access_hotel_position_manager,hotel.position.manager,model_hotel_position,,1,1,1,1
 access_hotel_staff_manager,hotel.staff.manager,model_hotel_staff,,1,1,1,1
 access_hotel_reservation_form_manager,hotel.reservation.form.manager,model_hotel_reservation_form,,1,1,1,1
-access_hotel_onl_payment_manager,hotel.onl.payment.manager,model_hotel_onl_payment,,1,1,1,1
+access_hotel_room_rental_manager,hotel.room.rental.manager,model_hotel_room_rental_detail,,1,1,1,1
