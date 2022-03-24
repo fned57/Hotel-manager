@@ -7,7 +7,7 @@ class HotelServiceDetail(models.Model):
     _rec_name = 'service_id'
 
     service_id = fields.Many2one('hotel.service', string="Service")
-    number_of_uses = fields.Integer(string=" Number of Uses")
+    number_of_uses = fields.Integer(string=" Number of Uses", default="0")
     amount = fields.Float(string="Amount")
     note = fields.Text(string="Node")
 

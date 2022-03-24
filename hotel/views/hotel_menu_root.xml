@@ -4,6 +4,7 @@
     <data>
         <menuitem id="hotel_menu_roots"
                   name="Hotel"
+
         />
         <!--        menu-->
         <menuitem id="hotel_menu_root"

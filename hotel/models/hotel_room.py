@@ -5,8 +5,8 @@ class HotelRoom(models.Model):
     _name = 'hotel.room'
     _description = "Hotel Rooms"
 
-    name = fields.Char(string= "Name room")
-    status = fields.Selection([ ('1', 'Empty'),('2', 'Busy')],'Type', default='1')
+    name = fields.Char(string="Name room")
+    status = fields.Selection([('1', 'Empty'), ('2', 'Busy')], 'Status', default='2')
     description = fields.Text(string="Description Room")
     avatar = fields.Binary(string="Image Avatar")
     room_type_id = fields.Many2one('hotel.room.type', string="Room type")

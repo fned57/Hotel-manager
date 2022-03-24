@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <odoo>
 
 
@@ -13,19 +13,15 @@
                                 User name:
                                 <t t-esc="doc.guest_id.name"/>
                             </h2>
+                            Total mature :
+                            <t t-esc="doc.total_mature"/>
+                            <br/>
+                            Total chidren :
+                            <t t-esc="doc.total_children"/>
+                            <br/>
                             Date of issue :
                             <t t-esc="doc.date_of_issue"/>
-                            <br/>
-                            Arrival date :
-                            <t t-esc="doc.arrival_date"/>
-                            <br/>
-                            Departure date :
-                            <t t-esc="doc.departure_date"/>
                         </div>
-                        <div class="col">
-
-                        </div>
-
                     </div>
 
                 </div>
@@ -33,29 +29,35 @@
 
                 <div class="container">
                     <h3>Rooms</h3>
-                    <table class="table">
+                    <table class="table table-bordered" style="text-align: right">
                         <thead>
                             <tr>
-                                <th scope="col">#</th>
                                 <th scope="col">Name</th>
-                                <th scope="col">Room type</th>
                                 <th scope="col">Price</th>
+                                <th scope="col">Discount</th>
+                                <th scope="col">Total</th>
                             </tr>
                         </thead>
                         <tbody>
                             <t t-foreach="doc.room_ids" t-as="line">
                                 <tr>
                                     <th scope="row">
-                                        <span t-field="line.id"/>
+                                        <span t-field="line.room_id"/>
                                     </th>
                                     <td>
-                                        <span t-field="line.name"/>
+                                        <span t-field="line.room_id.price"/>
                                     </td>
                                     <td>
-                                        <span t-field="line.room_type_id.name"/>
+                                        <t t-foreach="line.promotion_ids" t-as="discount">
+                                            <p>
+                                                <spam t-field="discount.discount"/>
+                                                %
+                                            </p>
+
+                                        </t>
                                     </td>
                                     <td>
-                                        <span t-field="line.price"/>
+                                        <span t-field="line.total"/>
                                     </td>
                                 </tr>
 
@@ -68,7 +70,7 @@
 
                 <div class="container">
                     <h3>Service</h3>
-                    <table class="table">
+                    <table class="table table-bordered" style="text-align: right">
                         <thead>
                             <tr>
                                 <th scope="col">Name</th>
@@ -101,12 +103,11 @@
                     </table>
                 </div>
                 <hr/>
-                Total : <br/>
-                Room:
-                <br/>
-
-                Service :
-
+                <div class="container" style="text-align: right;" >
+                    <h2>
+                        Total : <span t-field="doc.total_money"/>
+                    </h2>
+                </div>
 
             </t>
         </t>
