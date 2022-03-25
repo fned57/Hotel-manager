@@ -10,6 +10,7 @@ class HotelServiceDetail(models.Model):
     number_of_uses = fields.Integer(string=" Number of Uses", default="0")
     amount = fields.Float(string="Amount")
     note = fields.Text(string="Node")
+    reservation_id = fields.Many2one('hotel.reservation.form')
 
     @api.onchange("number_of_uses")
     def onchange_number_of_uses(self):

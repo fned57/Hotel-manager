@@ -13,13 +13,15 @@ class HotelPromotion(models.Model):
     discount = fields.Float(string="Discount")
     ending_date = fields.Date(string="End Date", default=date.today())
     room_type_id = fields.Many2one('hotel.room.type', string="Room type")
-    status = fields.Selection([('1', 'Empty'), ('2', 'Busy')], 'Status', default='2')
+    status = fields.Selection([('1', 'Activated'), ('2', 'No Activated'), ('3', 'Out of day')], 'Status', default='2')
 
-    # @api.onchange('starting_date', 'ending_date')
-    # def _compute_status(self):
-    #     if ((date.today() - self.starting_date).days >= 0) and ((date.today() - self.ending_date).days <= 0):
-    #         self.status = 1
-    #     else:
-    #         self.status = 2
+    @api.onchange('starting_date', 'ending_date')
+    def _compute_status(self):
+        if (date.today() - self.starting_date).days < 0:
+            self.status = '2'
+        elif (date.today() - self.ending_date).days > 0:
+            self.status = '3'
+        else:
+            self.status = '1'
 
     

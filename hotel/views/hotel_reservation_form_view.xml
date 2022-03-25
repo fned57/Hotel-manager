@@ -4,13 +4,58 @@
 <odoo>
 
     <data>
+
+        <record id="hotel_reservation_form_view_kanban" model="ir.ui.view">
+            <field name="name">hotel.reservation.form.kanban</field>
+            <field name="model">hotel.reservation.form</field>
+            <field name="arch" type="xml">
+
+                <kanban>
+                    <field name="guest_id"/>
+                    <field name="date_of_issue"/>
+                    <field name="status"/>
+
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div t-attf-class="oe_kanban_global_click">
+                                <div t-attf-class="#{!selection_mode ? 'text-center' : ''}">
+                                    <i class="fa fa-building" role="img" aria-label="Enterprise" title="Enterprise"></i>
+                                    <strong>
+                                        <field name="guest_id"/>
+                                    </strong>
+                                </div>
+                                <hr class="mt4 mb4"/>
+
+                                    <div class="row" t-if="!selection_mode">
+                                        <div class="col-6 text-center">
+                                            <strong>Date of issie:</strong>
+                                        </div>
+                                        <div class="col-6 text-center">
+                                            <strong>Status</strong>
+                                        </div>
+                                        <div class="col-6 text-center">
+                                            <field name="date_of_issue"/>
+                                        </div>
+                                        <div class="col-6 text-center o_force_ltr">
+                                            <field name="status"/>
+                                        </div>
+                                    </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+
+            </field>
+        </record>
+
         <record id="hotel_reservation_form_view_form" model="ir.ui.view">
             <field name="name">hotel.reservation.form.form</field>
             <field name="model">hotel.reservation.form</field>
             <field name="arch" type="xml">
                 <form>
                     <sheet>
-                        <button  class="btn btn-primary" name="payment" type="object" attrs="{'invisible': [('status','=', '1')]}">
+                        <button class="btn btn-primary" name="payment" type="object"
+                                attrs="{'invisible': [('status','=', '1')]}">
                             Payment
                         </button>
                         <group>
@@ -27,8 +72,8 @@
                         </group>
                         <group>
                             <notebook>
-                                <page string="Rooms" >
-                                     <field name="room_ids">
+                                <page string="Rooms">
+                                    <field name="room_ids">
                                         <tree>
                                             <field name="room_id"/>
                                             <field name="arrival_date"/>

@@ -3,6 +3,7 @@
 
 <odoo>
     <data>
+
         <record id="hotel_room_view_form" model="ir.ui.view">
             <field name="name">hotel.room.form</field>
             <field name="model">hotel.room</field>
@@ -10,30 +11,34 @@
                 <form>
                     <scheet>
                         <div class="row align-items-start">
-                            <div class="col" >
-                                <field name="avatar" widget="image"/>
-                                <field name="description"/>
+                            <div class="col">
+                                <field name="admin"/>
+                                <field name="avatar" widget="image" attrs="{'readonly': [('admin', '!=', True)]}" />
+                                <field name="description" attrs="{'readonly': [('admin', '!=', 'True')]}"/>
                             </div>
                             <div class="col">
                                 <h1>
                                     <spam>Room type:</spam>
                                     <spam>
-                                        <field name="room_type_id"/>
+                                        <field name="room_type_id" attrs="{'readonly': [('admin', '!=', 'True')]}"/>
                                     </spam>
                                 </h1>
                                 <h2>
                                     <spam>Name:</spam>
                                     <spam>
-                                        <field name="name"/>
+                                        <field name="name" attrs="{'readonly': [('admin', '!=', 'True')]}"/>
                                     </spam>
                                 </h2>
                                 <p>
                                     <spam>Status:</spam>
                                     <spam>
-                                        <field name="status"/>
+                                        <field name="status" attrs="{'readonly': [('admin', '!=', 'True')]}"/>
                                     </spam>
                                 </p>
-                                <field name="evaluate_ids">
+                                <button class="btn btn-primary" name="%(hotel_reservation_form1_act)d" type="action">
+                                    Reservation
+                                </button>
+                                <field name="evaluate_ids"  >
                                     <tree editable="bottom">
                                         <field name="user_id"/>
                                         <field name="subject"/>

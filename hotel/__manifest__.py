@@ -19,7 +19,6 @@
 
         'views/hotel_room_type_view.xml',
         'views/hotel_promotion_view.xml',
-        'views/hotel_evaluate_view.xml',
         'views/hotel_service_view.xml',
         'views/hotel_service_detail_view.xml',
         'views/hotel_position_view.xml',

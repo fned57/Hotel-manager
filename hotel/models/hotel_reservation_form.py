@@ -12,8 +12,8 @@ class HotelReservationForm(models.Model):
     status = fields.Selection([('1', 'payment'), ('2', 'unpaid')], default='2')
     total_mature = fields.Integer(string="Total mature")
     total_children = fields.Integer(string="Total children")
-    room_ids = fields.Many2many('hotel.room.rental.detail', string="List rooms")
-    service_detail_ids = fields.Many2many('hotel.service.detail', string="Service")
+    room_ids = fields.One2many('hotel.room.rental.detail', 'reservation_id', string="List rooms")
+    service_detail_ids = fields.One2many('hotel.service.detail', 'reservation_id', string="Service")
     money = fields.Float(string="Money")
     total_money = fields.Float(string="Total money", compute='_compute_total_many')
 
@@ -31,15 +31,15 @@ class HotelReservationForm(models.Model):
     def payment(self):
         self.status = '1'
         for record in self:
-            for room in record.room_ids:
-                room.room_id.status = '1'
-
-    def write(self, value):
-        result = super().write(value)
-        if('room_ids' in value):
-            for record in self:
+            if record.room_ids:
                 for room in record.room_ids:
-                    room.room_id.status = '2'
-        return result
+                    room.room_id.status = '1'
+
+    @api.model
+    def create(self, value):
+        if('room_ids' in value):
+            for room in value['room_ids']:
+                self.env['hotel.room'].browse(room[2]['room_id']).status = '2'
+        return super().create(value)
 
 
