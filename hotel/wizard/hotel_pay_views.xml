@@ -30,12 +30,5 @@
             <field name="view_mode">form</field>
             <field name="target">new</field>
         </record>
-
-
-        <menuitem id="wizard"
-                  name="Wizard"
-                  parent="hotel_menu_root"
-                  action="hotel_pay_act"
-        />
     </data>
 </odoo>
