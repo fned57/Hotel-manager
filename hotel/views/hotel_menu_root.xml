@@ -23,6 +23,6 @@
 
         <menuitem id="hotel_guest_menu_root"
                    parent="hotel_menu_roots"
-                  name="Guest"/>
+                  name="Book room"/>
     </data>
 </odoo>

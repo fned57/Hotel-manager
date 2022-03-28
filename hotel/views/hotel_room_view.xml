@@ -4,6 +4,21 @@
 <odoo>
     <data>
 
+        <record id="hotel_room_view_search" model="ir.ui.view">
+            <field name="name">hotel.room.search</field>
+            <field name="model">hotel.room</field>
+            <field name="arch" type="xml">
+                <search>
+
+                    <group expand="0" string="Group By">
+                        <filter string="Room type" name="room_type_id" domain="[]" context="{'group_by':'room_type_id'}"/>
+<!--                        <filter string="Model" name="model" domain="[]" context="{'group_by':'room_type_id'}"/>-->
+                    </group>
+                </search>
+            </field>
+        </record>
+
+
         <record id="hotel_room_view_form" model="ir.ui.view">
             <field name="name">hotel.room.form</field>
             <field name="model">hotel.room</field>
@@ -13,32 +28,32 @@
                         <div class="row align-items-start">
                             <div class="col">
                                 <field name="admin"/>
-                                <field name="avatar" widget="image" attrs="{'readonly': [('admin', '!=', True)]}" />
-                                <field name="description" attrs="{'readonly': [('admin', '!=', 'True')]}"/>
+                                <field name="avatar" widget="image" attrs="{'readonly': [('admin', '=', False)]}"/>
+                                <field name="description" attrs="{'readonly': [('admin', '=', False)]}"/>
                             </div>
                             <div class="col">
                                 <h1>
                                     <spam>Room type:</spam>
                                     <spam>
-                                        <field name="room_type_id" attrs="{'readonly': [('admin', '!=', 'True')]}"/>
+                                        <field name="room_type_id" attrs="{'readonly': [('admin', '=', False)]}"/>
                                     </spam>
                                 </h1>
                                 <h2>
                                     <spam>Name:</spam>
                                     <spam>
-                                        <field name="name" attrs="{'readonly': [('admin', '!=', 'True')]}"/>
+                                        <field name="name" attrs="{'readonly': [('admin', '=', False)]}"/>
                                     </spam>
                                 </h2>
                                 <p>
                                     <spam>Status:</spam>
                                     <spam>
-                                        <field name="status" attrs="{'readonly': [('admin', '!=', 'True')]}"/>
+                                        <field name="status" attrs="{'readonly': [('admin', '=', False)]}"/>
                                     </spam>
                                 </p>
                                 <button class="btn btn-primary" name="%(hotel_reservation_form1_act)d" type="action">
                                     Reservation
                                 </button>
-                                <field name="evaluate_ids"  >
+                                <field name="evaluate_ids">
                                     <tree editable="bottom">
                                         <field name="user_id"/>
                                         <field name="subject"/>

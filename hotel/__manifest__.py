@@ -14,6 +14,7 @@
         'security/hotel_security.xml',
         'security/ir.model.access.csv',
 
+        'wizard/hotel_pay_views.xml',
         'views/hotel_menu_root.xml',
         'views/hotel_room_view.xml',
 

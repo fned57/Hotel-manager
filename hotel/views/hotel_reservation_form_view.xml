@@ -5,6 +5,67 @@
 
     <data>
 
+        <record id="hotel_reservation_form_view_search" model="ir.ui.view">
+            <field name="name">hotel.reservation.form.search</field>
+            <field name="model">hotel.reservation.form</field>
+            <field name="arch" type="xml">
+                <search string="Search Leads">
+                    <!--                    <field name="name" string="Lead" filter_domain="['|','|','|',('partner_name', 'ilike', self),('email_from', 'ilike', self), ('contact_name', 'ilike', self), ('name', 'ilike', self)]"/>-->
+                    <!--                    <field name="tag_ids" string="Tag" filter_domain="[('tag_ids', 'ilike', self)]"/>-->
+                    <!--                    <field name="user_id"/>-->
+                    <!--                    <field name="team_id"/>-->
+                    <!--                    <field name="country_id"/>-->
+                    <!--                    <field name="city"/>-->
+                    <!--                    <field name="phone_mobile_search"/>-->
+                    <!--                    <field name="lang_id"/>-->
+                    <!--                    <field name="create_date"/>-->
+                    <!--                    <field name="source_id"/>-->
+                    <!--                    <field name="medium_id"/>-->
+                    <!--                    <field name="campaign_id"/>-->
+                    <!--                    <field name="activity_state"/>-->
+                    <!--                    <separator />-->
+                    <!--                    <filter string="payment"-->
+                    <!--                            name="status"-->
+                    <!--                            domain="[('status', '=', 'payment')]"-->
+                    <!--                            help="Leads that are assigned to me"/>-->
+                    <!--                    <filter string="unpaid" name="status"-->
+                    <!--                            domain="[('status','!=', 'payment')]"-->
+                    <!--                            help="Leads that are not assigned"/>-->
+                    <!--                    <separator />-->
+                    <!--                    <filter string="Lost" name="lost"-->
+                    <!--                            domain="['&amp;', ('probability', '=', 0), ('active', '=', False)]"/>-->
+                    <!--                    <separator/>-->
+                    <!--                    <filter string="Creation Date" name="filter_creation_date" date="create_date" default_period="this_month"/>-->
+                    <!--                    <filter name="filter_date_closed" date="date_closed"/>-->
+                    <!--                    <separator/>-->
+                    <!--                    <separator/>-->
+                    <!--                    <filter invisible="1" string="Late Activities" name="activities_overdue"-->
+                    <!--                            domain="[('my_activity_date_deadline', '&lt;', context_today().strftime('%Y-%m-%d'))]"-->
+                    <!--                            help="Show all opportunities for which the next action date is before today"/>-->
+                    <!--                    <filter invisible="1" string="Today Activities" name="activities_today"-->
+                    <!--                            domain="[('my_activity_date_deadline', '=', context_today().strftime('%Y-%m-%d'))]"/>-->
+                    <!--                    <filter invisible="1" string="Future Activities" name="activities_upcoming_all"-->
+                    <!--                            domain="[('my_activity_date_deadline', '&gt;', context_today().strftime('%Y-%m-%d'))]"/>-->
+                    <!--                    <separator/>-->
+                    <!--                    <filter string="Archived" name="inactive" domain="[('active', '=', False)]"/>-->
+                    <group expand="0" string="Group By">
+                        <filter string="payment" name="status" domain="[('status', '=', True)]"/>
+                        <filter string="unpaid" name="status" domain="[('status', '!=', True)]"/>
+                        <!--                        <filter string="Sales Team" name="saleschannel" context="{'group_by':'team_id'}"/>-->
+                        <!--                        <filter name="city" string="City" context="{'group_by': 'city'}"/>-->
+                        <!--                        <filter string="Country" name="country" context="{'group_by':'country_id'}" />-->
+                        <!--                        <filter string="Company" name="company" context="{'group_by':'company_id'}" groups="base.group_multi_company"/>-->
+                        <!--                        <filter string="Campaign" name="compaign" domain="[]" context="{'group_by':'campaign_id'}"/>-->
+                        <!--                        <filter string="Medium" name="medium" domain="[]" context="{'group_by':'medium_id'}"/>-->
+                        <!--                        <filter string="Source" name="source" domain="[]" context="{'group_by':'source_id'}"/>-->
+                        <!--                        <separator orientation="vertical" />-->
+                        <!--                        <filter string="Creation Date" context="{'group_by':'create_date:month'}" name="month"/>-->
+                        <!--                        <filter string="Closed Date" name="date_closed" context="{'group_by':'date_closed'}"/>-->
+                    </group>
+                </search>
+            </field>
+        </record>
+
         <record id="hotel_reservation_form_view_kanban" model="ir.ui.view">
             <field name="name">hotel.reservation.form.kanban</field>
             <field name="model">hotel.reservation.form</field>
@@ -17,29 +78,34 @@
 
                     <templates>
                         <t t-name="kanban-box">
+
+
                             <div t-attf-class="oe_kanban_global_click">
                                 <div t-attf-class="#{!selection_mode ? 'text-center' : ''}">
-                                    <i class="fa fa-building" role="img" aria-label="Enterprise" title="Enterprise"></i>
+                                    <i class="fa fa-building" role="img" aria-label="Enterprise"
+                                       title="Enterprise"></i>
                                     <strong>
                                         <field name="guest_id"/>
                                     </strong>
                                 </div>
                                 <hr class="mt4 mb4"/>
 
-                                    <div class="row" t-if="!selection_mode">
-                                        <div class="col-6 text-center">
-                                            <strong>Date of issie:</strong>
-                                        </div>
-                                        <div class="col-6 text-center">
-                                            <strong>Status</strong>
-                                        </div>
-                                        <div class="col-6 text-center">
-                                            <field name="date_of_issue"/>
-                                        </div>
-                                        <div class="col-6 text-center o_force_ltr">
+                                <div class="row" t-if="!selection_mode">
+                                    <div class="col-6 text-center">
+                                        <strong>Date of issie:</strong>
+                                    </div>
+                                    <div class="col-6 text-center">
+                                        <strong>Status</strong>
+                                    </div>
+                                    <div class="col-6 text-center">
+                                        <field name="date_of_issue"/>
+                                    </div>
+
+                                         <div class="col-6 text-center o_force_ltr">
                                             <field name="status"/>
                                         </div>
-                                    </div>
+
+                                </div>
                             </div>
                         </t>
                     </templates>
@@ -54,15 +120,18 @@
             <field name="arch" type="xml">
                 <form>
                     <sheet>
-                        <button class="btn btn-primary" name="payment" type="object"
-                                attrs="{'invisible': [('status','=', '1')]}">
-                            Payment
-                        </button>
+                        <button class="btn btn-primary"
+                                name="%(hotel_pay_act)d"
+                                type="action"
+                                attrs="{'invisible': [('status', '=', True)]}"
+                                context="{'default_reservation_id': active_id}">
+                                    Pay
+                                </button>
                         <group>
                             <group>
                                 <field name="guest_id"/>
                                 <field name="date_of_issue"/>
-                                <field name="status"/>
+                                <field name="status" attrs="{'invisible': [(1,'=', 1)]}"/>
                                 <field name="total_money"/>
                             </group>
                             <group>

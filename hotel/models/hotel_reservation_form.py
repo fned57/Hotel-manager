@@ -9,7 +9,7 @@ class HotelReservationForm(models.Model):
 
     guest_id = fields.Many2one('res.users', 'User', default=lambda self: self.env.user.id)
     date_of_issue = fields.Date(string="Date of issue", default=datetime.today())
-    status = fields.Selection([('1', 'payment'), ('2', 'unpaid')], default='2')
+    status = fields.Boolean(string='payment', default=False)
     total_mature = fields.Integer(string="Total mature")
     total_children = fields.Integer(string="Total children")
     room_ids = fields.One2many('hotel.room.rental.detail', 'reservation_id', string="List rooms")
@@ -29,7 +29,7 @@ class HotelReservationForm(models.Model):
         self.total_money = total_room + total_service
 
     def payment(self):
-        self.status = '1'
+        self.status = True
         for record in self:
             if record.room_ids:
                 for room in record.room_ids:

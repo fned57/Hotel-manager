@@ -28,3 +28,5 @@ access_hotel_reservation_form_user,hotel.reservation.form.user,model_hotel_reser
 
 access_hotel_room_rental_manager,hotel.room.rental.manager,model_hotel_room_rental_detail,group_hotel_manager,1,1,1,1
 access_hotel_room_rental_user,hotel.room.rental.user,model_hotel_room_rental_detail,group_hotel_user,1,1,1,0
+
+access_hotel_pay_wizard_manager,hotel.pay.wizard.manager,model_hotel_pay_wizard,group_hotel_manager,1,1,1,1
