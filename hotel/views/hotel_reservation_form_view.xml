@@ -10,11 +10,13 @@
             <field name="model">hotel.reservation.form</field>
             <field name="arch" type="xml">
                 <search string="Search Leads">
+                    <group string="Group By">
 
-                    <group expand="0" string="Group By">
-                        <filter string="payment" name="status" domain="[('status', '=', True)]"/>
-                        <filter string="unpaid" name="status" domain="[('status', '!=', True)]"/>
-                     </group>
+                        <filter string="Scheduled" name="status1" domain="[('status', '=', '1')]"/>
+                        <filter string="In Progress" name="status2" domain="[('status', '=', '2')]"/>
+                        <filter string="Completed" name="status3" domain="[('status', '=', '3')]"/>
+                        <filter string="Canceled" name="status4" domain="[('status', '=', '4')]"/>
+                    </group>
                 </search>
             </field>
         </record>
@@ -54,9 +56,9 @@
                                         <field name="date_of_issue"/>
                                     </div>
 
-                                         <div class="col-6 text-center o_force_ltr">
-                                            <field name="status"/>
-                                        </div>
+                                    <div class="col-6 text-center o_force_ltr">
+                                        <field name="status"/>
+                                    </div>
 
                                 </div>
                             </div>
@@ -71,8 +73,8 @@
             <field name="name">hotel.reservation.form.form</field>
             <field name="model">hotel.reservation.form</field>
             <field name="arch" type="xml">
-                <form>
-                     <header>
+                <form >
+                    <header>
 
                         <button class="btn btn-primary"
                                 name="%(hotel_pay_act)d"
@@ -82,24 +84,32 @@
                                 context="{'default_reservation_id': active_id}"
                                 groups="hotel.group_hotel_manager"
                         />
-                         <button class="btn btn-primary"
-                                name="Progress"
+                        <button class="btn btn-primary"
+                                name="progress"
                                 string="Progress"
                                 type="object"
                                 attrs="{'invisible': [('status', '!=', '1')]}"
                                 context="{'default_reservation_id': active_id}"
                                 groups="hotel.group_hotel_manager"
                         />
-                         <field name="status" widget="statusbar"/>
+                        <button class="btn btn-primary"
+                                name="canceled"
+                                string="Canceled"
+                                type="object"
+                                attrs="{'invisible': [('status', '!=', '1')]}"
+                                context="{'default_reservation_id': active_id}"
+                                groups="hotel.group_hotel_manager"
+                        />
+                        <field name="status" widget="statusbar"/>
 
-                   </header>
+                    </header>
                     <sheet>
 
                         <group>
                             <group>
                                 <field name="guest_id"/>
                                 <field name="date_of_issue"/>
-<!--                                <field name="status" />-->
+                                <!--                                <field name="status" />-->
                                 <field name="total_money"/>
                             </group>
                             <group>
@@ -144,6 +154,11 @@
             <field name="res_model">hotel.reservation.form</field>
             <field name="type">ir.actions.act_window</field>
             <field name="view_mode">kanban,form,tree</field>
+            <field name="context">
+                { 'search_default_status2': 1
+                }
+            </field>
+
         </record>
 
         <record id="hotel_reservation_form1_act" model="ir.actions.act_window">

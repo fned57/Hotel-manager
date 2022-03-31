@@ -1,12 +1,11 @@
 # -*- coding: utf-8 -*-
 {
     "name": "Hotel",
-    'summary': """""",
+    'summary': """Hotel manger""",
     'description': """""",
     'author': "Trần Đăng Tuấn",
     'website': "https://fb.com/tdthc",
-    'category': '',
-    'version': '0.1',
+    'version': '15.0.1.0.0',
     'depends': [
 
     ],

@@ -22,13 +22,18 @@
                     <sheet>
                         <group>
                             <field name="room_id" domain="[('status','=', '1')]"/>
+                            <field name="compute_rent" widget="radio" />
                         </group>
-                        <group>
+                        <group attrs="{'invisible':[('compute_rent', '!=', 'date')]}">
                             <field name="arrival_date"/>
                             <field name="departure_date"/>
                         </group>
+                        <group attrs="{'invisible':[('compute_rent', '!=', 'hour')]}">
+                            <field name="time_start" />
+                            <field name="time_end" />
+                        </group>
                         <group>
-                            <field name="promotion_ids" domain="[('status','=', '1')]"/>
+                            <field name="promotion_ids"/>
                         </group>
                         <group>
                             <field name="total"/>

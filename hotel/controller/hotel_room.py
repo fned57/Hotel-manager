@@ -13,6 +13,7 @@ class RoomsController(http.Controller):
         for i in kwargs:
             domain.append((i, '=', kwargs[i]))
         try:
+            print(domain)
             rooms = request.env['hotel.room'].sudo().search(domain)
             room = []
             for r in rooms:

@@ -20,7 +20,6 @@ class HotelReservationForm(models.Model):
     money = fields.Float(string="Money")
     total_money = fields.Float(string="Total money", compute='_compute_total_many')
 
-
     @api.depends('room_ids', 'service_detail_ids')
     def _compute_total_many(self):
         total_room = 0.0
@@ -39,7 +38,12 @@ class HotelReservationForm(models.Model):
                 self.env['hotel.room'].browse(room[2]['room_id']).status = '2'
         return super().create(value)
 
-    def Progress(self):
+    def progress(self):
         self.status = '2'
+
+    def canceled(self):
+        self.status = '4'
+
+
 
 
