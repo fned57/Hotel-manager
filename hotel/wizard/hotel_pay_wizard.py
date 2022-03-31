@@ -16,7 +16,7 @@ class HotelPayWizard(models.TransientModel):
         self.excess_cash = self.total_money - self.cash
 
     def pay(self):
-        self.reservation_id.status = True
+        self.reservation_id.status = '3'
         for room in self.reservation_id.room_ids:
             room.room_id.status = '1'
 
