@@ -21,7 +21,7 @@
                                         <field name="name"/>
                                     </h1>
                                     <p>
-                                        <field name="price"/>
+                                        <field name="price" widget='monetary'/>
                                         <field name="description"/>
                                     </p>
                                 </div>

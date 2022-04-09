@@ -11,34 +11,40 @@
                 <form>
                     <sheet>
                         <group>
-                            <field name="name"/>
+                            <group>
+                                <field name="name"/>
+                                <field name="subject"/>
+                            </group>
+                            <group>
+                                <field name="starting_date"/>
+                                <field name="ending_date"/>
+                            </group>
+                        </group>
+                        <group>
                             <field name="short_description"/>
-                            <field name="subject"/>
-                            <field name="compute_price" widget="radio"/>
-                            <field name="image"/>
-                            <field name="starting_date"/>
+                        </group>
+                        <group>
+                            <group>
+                                <field name="compute_price" widget="radio"/>
+                            </group>
+                            <group>
+                                <field name="image"/>
+                            </group>
                         </group>
                         <group attrs="{'invisible':[('compute_price', '!=', 'percentage')]}">
 
-                                <field name="discount" class="oe_inline"
-                                       attrs="{'invisible':[('compute_price', '!=', 'percentage')]}"/>
-
-<!--                            <div attrs="{'invisible':[('compute_price', '!=', 'fixed')]}">-->
-<!--                                <field name="fixed_price" class="oe_inline" widget="monetary"-->
-<!--                                       attrs="{'invisible':[('compute_price', '!=', 'fixed')]}"/>$-->
-<!--                            </div>-->
+                            <field name="discount" class="oe_inline"
+                                   attrs="{'invisible':[('compute_price', '!=', 'percentage')]}"/>
                         </group>
                         <group attrs="{'invisible':[('compute_price', '!=', 'fixed')]}">
 
 
-                                <field name="fixed_price" class="oe_inline" widget="monetary"
-                                       attrs="{'invisible':[('compute_price', '!=', 'fixed')]}"/>
+                            <field name="fixed_price" class="oe_inline" widget="monetary"
+                                   attrs="{'invisible':[('compute_price', '!=', 'fixed')]}"/>
 
                         </group>
                         <group>
-
-                            <field name="ending_date"/>
-                            <field name="room_type_id"/>
+                            <field name="room_type_ids" widget="many2many_tags"/>
                             <field name="status"/>
 
                         </group>

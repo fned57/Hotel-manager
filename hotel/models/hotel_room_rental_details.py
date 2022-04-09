@@ -15,7 +15,7 @@ class HotelRoomRentalDetail(models.Model):
     arrival_date = fields.Date(string="Arrival Date", default=date.today(), required=True)
     departure_date = fields.Date(string="Departure Date", default=date.today(), required=True)
     promotion_ids = fields.Many2many('hotel.promotion', string="Promotions")
-    total = fields.Float(string="Total money")
+    total = fields.Float(string="Total money", compute='_compute_total')
     reservation_id = fields.Many2one('hotel.reservation.form')
     time_start = fields.Datetime('Time start', default=lambda self: fields.Datetime.now())
     time_end = fields.Datetime('Time end', default=lambda self: fields.Datetime.now())
@@ -30,15 +30,14 @@ class HotelRoomRentalDetail(models.Model):
         if (self.departure_date - date.today()).days < 0:
             raise ValidationError("departure date < " + str(date.today()))
 
-    @api.onchange('promotion_ids', 'arrival_date', 'departure_date', 'compute_rent', 'time_start', 'time_end')
-    def _onchange_total(self):
+    @api.depends('promotion_ids', 'arrival_date', 'departure_date', 'compute_rent', 'time_start', 'time_end')
+    def _compute_total(self):
         money = 0
         if self.compute_rent == 'date':
             day_uses = (self.departure_date - self.arrival_date).days
             money = self.room_id.price * int(day_uses)
         elif self.compute_rent == 'hour':
-            money = (self.time_end - self.time_start)\
-                             .total_seconds() / 60 / 60 * self.room_id.room_type_id.price_hour
+            money = (self.time_end - self.time_start).total_seconds() / 60 / 60 * self.room_id.room_type_id.price_hour
         else:
             money = self.room_id.room_type_id.price_overnight
 
@@ -52,12 +51,13 @@ class HotelRoomRentalDetail(models.Model):
 
     @api.onchange('room_id')
     def _onchange_room_id(self):
-        domain = [
-            ('starting_date', '<=', date.today()),
-            ('ending_date', '>=', date.today()),
-            ('room_type_id.id', '=', self.room_id.room_type_id.id)
-        ]
-        self.promotion_ids = self.env['hotel.promotion'].search(domain)
+        if self.room_id.room_type_id:
+            domain = [
+                ('starting_date', '<=', date.today()),
+                ('ending_date', '>=', date.today()),
+                ('room_type_ids.id', '=', self.room_id.room_type_id.id)
+            ]
+            self.promotion_ids = self.env['hotel.promotion'].search(domain)
 
     def write(self, value):
         if 'room_id' in value:

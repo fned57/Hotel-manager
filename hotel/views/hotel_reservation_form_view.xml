@@ -5,21 +5,21 @@
 
     <data>
 
-        <record id="hotel_reservation_form_view_search" model="ir.ui.view">
-            <field name="name">hotel.reservation.form.search</field>
-            <field name="model">hotel.reservation.form</field>
-            <field name="arch" type="xml">
-                <search string="Search Leads">
-                    <group string="Group By">
+        <!--        <record id="hotel_reservation_form_view_search" model="ir.ui.view">-->
+        <!--            <field name="name">hotel.reservation.form.search</field>-->
+        <!--            <field name="model">hotel.reservation.form</field>-->
+        <!--            <field name="arch" type="xml">-->
+        <!--                <search string="Search Leads">-->
+        <!--                    <group string="Group By">-->
 
-                        <filter string="Scheduled" name="status1" domain="[('status', '=', '1')]"/>
-                        <filter string="In Progress" name="status2" domain="[('status', '=', '2')]"/>
-                        <filter string="Completed" name="status3" domain="[('status', '=', '3')]"/>
-                        <filter string="Canceled" name="status4" domain="[('status', '=', '4')]"/>
-                    </group>
-                </search>
-            </field>
-        </record>
+        <!--                        <filter string="Scheduled" name="status1" domain="[('status', '=', '1')]"/>-->
+        <!--                        <filter string="In Progress" name="status2" domain="[('status', '=', '2')]"/>-->
+        <!--                        <filter string="Completed" name="status3" domain="[('status', '=', '3')]"/>-->
+        <!--                        <filter string="Canceled" name="status4" domain="[('status', '=', '4')]"/>-->
+        <!--                    </group>-->
+        <!--                </search>-->
+        <!--            </field>-->
+        <!--        </record>-->
 
         <record id="hotel_reservation_form_view_kanban" model="ir.ui.view">
             <field name="name">hotel.reservation.form.kanban</field>
@@ -29,38 +29,35 @@
                 <kanban>
                     <field name="guest_id"/>
                     <field name="date_of_issue"/>
-                    <field name="status"/>
+                    <!--                    <field name="status"/>-->
 
                     <templates>
                         <t t-name="kanban-box">
 
 
                             <div t-attf-class="oe_kanban_global_click">
-                                <div t-attf-class="#{!selection_mode ? 'text-center' : ''}">
-                                    <i class="fa fa-building" role="img" aria-label="Enterprise"
-                                       title="Enterprise"></i>
-                                    <strong>
-                                        <field name="guest_id"/>
-                                    </strong>
+                            <div t-attf-class="#{!selection_mode ? 'text-center' : ''}">
+                                <i class="fa fa-building" role="img" aria-label="Enterprise"
+                                   title="Enterprise"></i>
+                                <strong>
+                                    <field name="guest_id"/>
+                                </strong>
+                            </div>
+                            <hr class="mt4 mb4"/>
+                            <div class="row">
+                                <div class="col-6 text-center">
+                                    <strong>Date of issie:</strong>
                                 </div>
-                                <hr class="mt4 mb4"/>
-
-                                <div class="row" t-if="!selection_mode">
-                                    <div class="col-6 text-center">
-                                        <strong>Date of issie:</strong>
-                                    </div>
-                                    <div class="col-6 text-center">
-                                        <strong>Status</strong>
-                                    </div>
-                                    <div class="col-6 text-center">
-                                        <field name="date_of_issue"/>
-                                    </div>
-
-                                    <div class="col-6 text-center o_force_ltr">
-                                        <field name="status"/>
-                                    </div>
-
+                                <div class="col-6 text-center">
+                                    <strong>Status</strong>
                                 </div>
+                                <div class="col-6 text-center">
+                                    <field name="date_of_issue"/>
+                                </div>
+                                <div class="col-6 text-center o_force_ltr">
+                                    <field name="status"/>
+                                </div>
+                            </div>
                             </div>
                         </t>
                     </templates>
@@ -73,7 +70,7 @@
             <field name="name">hotel.reservation.form.form</field>
             <field name="model">hotel.reservation.form</field>
             <field name="arch" type="xml">
-                <form >
+                <form>
                     <header>
 
                         <button class="btn btn-primary"
@@ -154,10 +151,10 @@
             <field name="res_model">hotel.reservation.form</field>
             <field name="type">ir.actions.act_window</field>
             <field name="view_mode">kanban,form,tree</field>
-            <field name="context">
-                { 'search_default_status2': 1
-                }
-            </field>
+            <!--            <field name="context">-->
+            <!--                { 'search_default_status2': 1-->
+            <!--                }-->
+            <!--            </field>-->
 
         </record>
 

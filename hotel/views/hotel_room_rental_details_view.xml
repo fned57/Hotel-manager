@@ -33,7 +33,8 @@
                             <field name="time_end" />
                         </group>
                         <group>
-                            <field name="promotion_ids"/>
+                            <field name="promotion_ids" widget="many2many_tags"
+                                   domain="[('ending_date', '&gt;=', datetime.date.today().strftime('%Y-%m-%d')),('starting_date', '&lt;=', datetime.date.today().strftime('%Y-%m-%d'))]"/>
                         </group>
                         <group>
                             <field name="total"/>
